@@ -1,0 +1,323 @@
+/* HOME */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* BASE */
+body {
+  background-color: #f6f1eb;
+  color: #3e3a36;
+}
+
+/* === HEADER === */
+.header {
+  background-color: #6b4f3f; /* café otoñal */
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+
+.header__icon {
+  width: 28px;
+}
+
+.header__logo span {
+  font-size: 1.1rem;
+}
+
+.header__menu {
+  display: flex;
+  gap: 20px;
+}
+
+.header__item {
+  color: #f3e9d2;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.header__item:hover {
+  opacity: 0.8;
+}
+
+/* HAMBURGUESA */
+.header__toggle {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* === SLIDER === */
+.slider {
+  position: relative;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.slider__img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.slider__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.slider__caption {
+  position: absolute;
+  bottom: 20%;
+}
+
+.slider__title {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* === CONTENT === */
+.content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* === ESPACIADO GENERAL === */
+section {
+  margin-top: 60px;
+}
+
+/* === TITULOS === */
+.content__title {
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+}
+
+.section__title {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+/* === FRASES === */
+.phrases__text {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* === PILARES === */
+.pillars {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pillars__item {
+  background: #ffffff;
+  padding: 25px;
+  width: 260px;
+  border-radius: 12px;
+  border: 1px solid #e5ddd5;
+  line-height: 1.4;
+}
+
+/* === TERAPIAS === */
+.therapies {
+  margin-top: 60px;
+}
+
+.therapies__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.therapy {
+  background: #fff;
+  padding: 25px;
+  width: 260px;
+  border-radius: 12px;
+  border: 1px solid #e5ddd5;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.therapy i {
+  font-size: 30px;
+  color: #a67c52;
+  margin-bottom: 10px;
+}
+
+/* === QUÉ ENFERMEDADES SE TRATA === */
+.diseases {
+  margin-top: 60px;
+}
+
+.diseases__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.disease {
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #e5ddd5;
+}
+
+/* === CONTACTO === */
+.contact {
+  margin-top: 60px;
+}
+
+.contact__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contact__info p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.contact__info i {
+  color: #a67c52;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 280px;
+}
+
+.contact__form input,
+.contact__form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* BOTONES */
+.contact__form button,
+.cta__button {
+  background-color: #a67c52;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.contact__form button:hover,
+.cta__button:hover {
+  opacity: 0.85;
+}
+
+/* === FOOTER === */
+.footer {
+  margin-top: 60px;
+  background-color: #6b4f3f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 768px) {
+
+  .header {
+    padding: 10px 20px;
+  }
+
+  .header__toggle {
+    display: block;
+  }
+
+  .header__menu {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .header__menu.active {
+    display: flex;
+  }
+
+  .slider__img {
+    height: 250px;
+  }
+
+  .slider__title {
+    font-size: 1.4rem;
+  }
+
+  .contact__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+.contact__link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.contact__link:hover {
+  opacity: 0.7;
+}
+
+
+/* LOGO CON ESTILO */
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+/* PRANA */
+.logo-prana {
+  color: #a67c52; /* beige/café */ 
+}
+
+/* ANIMAL */
+.logo-animal {
+  color: #5f7c6a; /* verde suave */
+}
+
+.logo-text {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
