@@ -14,12 +14,13 @@ body {
 
 /* === HEADER === */
 .header {
-  background-color: #6b4f3f; /* café otoñal */
+  background-color: #6b4f3f;
   padding: 10px 30px;
-  display: flex;
-  justify-content: space-between;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .header__logo {
@@ -39,6 +40,7 @@ body {
 
 .header__menu {
   display: flex;
+  justify-content: flex-end;
   gap: 20px;
 }
 
@@ -127,16 +129,16 @@ section {
 /* === PILARES === */
 .pillars {
   margin-top: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
 
 .pillars__item {
   background: #ffffff;
   padding: 25px;
-  width: 260px;
+  width: 100%;
   border-radius: 12px;
   border: 1px solid #e5ddd5;
   line-height: 1.4;
@@ -148,16 +150,15 @@ section {
 }
 
 .therapies__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
 
 .therapy {
   background: #fff;
   padding: 25px;
-  width: 260px;
+  width: 100%;
   border-radius: 12px;
   border: 1px solid #e5ddd5;
   text-align: center;
@@ -170,15 +171,14 @@ section {
   margin-bottom: 10px;
 }
 
-/* === QUÉ ENFERMEDADES SE TRATA === */
+/* === ENFERMEDADES === */
 .diseases {
   margin-top: 60px;
 }
 
 .diseases__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 10px;
 }
 
@@ -187,6 +187,7 @@ section {
   padding: 10px 15px;
   border-radius: 20px;
   border: 1px solid #e5ddd5;
+  text-align: center;
 }
 
 /* === CONTACTO === */
@@ -195,35 +196,60 @@ section {
 }
 
 .contact__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+
+  align-items: start;
+}
+
+/* COLUMNA IZQUIERDA */
+.contact__info {
+  width: 100%;
+}
+
+.contact__info h3 {
+  margin-bottom: 20px;
 }
 
 .contact__info p {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .contact__info i {
   color: #a67c52;
 }
 
+/* COLUMNA DERECHA */
 .contact__form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 280px;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
 .contact__form input,
 .contact__form textarea {
-  padding: 10px;
+  width: 100%;
+
+  padding: 12px;
   border-radius: 8px;
   border: 1px solid #ddd;
+
+  background: white;
+}
+
+.contact__form textarea {
+  min-height: 120px;
+  resize: vertical;
 }
 
 /* BOTONES */
@@ -283,12 +309,13 @@ section {
   }
 
   .contact__container {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
 }
 
+/* LINKS */
 .contact__link {
   text-decoration: none;
   color: inherit;
@@ -299,22 +326,20 @@ section {
   opacity: 0.7;
 }
 
-
-/* LOGO CON ESTILO */
+/* LOGO */
 .logo-text {
   font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 500;
   letter-spacing: 0.5px;
 }
 
-/* PRANA */
 .logo-prana {
-  color: #a67c52; /* beige/café */ 
+  color: #a67c52;
 }
 
-/* ANIMAL */
 .logo-animal {
-  color: #5f7c6a; /* verde suave */
+  color: #5f7c6a;
 }
 
 .logo-text {
